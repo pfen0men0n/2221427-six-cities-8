@@ -2,11 +2,11 @@ import { User } from './user.type.js';
 import { Property } from './property.type.js';
 import { City } from './city.type.js';
 import { Location } from './location.type.js';
-import { Features } from './features.type.js';
+import { FEATURES } from '../../consts/constanst.js';
 
 export type Offer = {
     title: string;
-    descriprion: string;
+    description: string;
     postDate: Date;
     city: City;
     preview: string;
@@ -18,7 +18,7 @@ export type Offer = {
     rooms: number;
     guests: number;
     price: number;
-    features : Features;
+    features : typeof FEATURES;
     user: User;
     location: Location;
 
