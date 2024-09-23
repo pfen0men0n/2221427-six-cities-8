@@ -1,3 +1,5 @@
+#!c:\Program Files\nodejs
+
 import { CLIApplication, HelpCommand, VersionCommand, ImportCommand} from './cli/index.js';
 
 function bootstrap () {
