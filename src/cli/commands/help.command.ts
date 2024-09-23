@@ -1,4 +1,4 @@
-import  { Command } from './command.interface.js';
+import { Command } from './command.interface.js';
 import chalk from 'chalk';
 
 const main = chalk.bold.red;
@@ -9,13 +9,13 @@ const versionAll = chalk.bold.yellow;
 
 
 export class HelpCommand implements Command {
-    public getName(): string{
-       return '--help';  
-    }
-   
+  public getName(): string{
+    return '--help';
+  }
 
-    public async execute(..._parameters: string[]): Promise<void> {
-        console.info(`
+
+  public async execute(..._parameters: string[]): Promise<void> {
+    console.info(`
             ${main('Программа для подготовки данных для REST API сервера.')}
             ${examples('Пример:')}
                 ${example1('cli.js --<command>-- [--arguments]')}
@@ -25,6 +25,6 @@ export class HelpCommand implements Command {
                 ${versionAll('--import <path>:                # импортирует данные из TSV')} 
                 ${versionAll('--generate <n> <path> <url>     # генерирует произвольное количество тестовых данных')}
                 `);
-    }
+  }
 }
 
